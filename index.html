@@ -1,0 +1,165 @@
+<!DOCTYPE html>			
+<html>
+<head>
+	<!-- @portal -->
+	<link rel="stylesheet" type="text/css" href="/global/pics/css/jquery-ui-1.10.2.css" />
+	<link rel="stylesheet" type="text/css" href="/global/pics/css/edupageDefault.css?v=56a70a" />
+	<link rel="stylesheet" type="text/css" href="/global/pics/css/edubar.css?v=45dba0" />
+	<link rel="stylesheet" type="text/css" href="/global/pics/css/portalskin.css?v=6ad0cc" />							
+	<script type="text/javascript" src="/global/pics/js/jquery/jquery-1.9.1.min.js?v=20130325"></script>							
+	<script type="text/javascript" src="/global/pics/js/jquery/jquery-ui-1.10.2.min.js"></script>			
+	<script type="text/javascript" src="/langs/pics/js/lang_en.js?v=4c4f8e"></script>
+	<script src="/global/pics/js/edubarUtils.js?v=a765b8" type="text/javascript"></script>								
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="shortcut icon" href="favicon.ico">
+	<title>EduPage</title>
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />					
+</head>
+<body id="docbody">	
+<div id="hornyPas">
+	<div class="obsahPasu obsahPasuLinks">
+		<ul id="quickLinks">
+			<li class="langChooser">
+				<a class="selectedLang"><img src="/langs/pics/en.gif" alt=""></a>
+				<div class="langLinks">
+					<div class="innerLinks">
+					<a class="selectedLang" href="/index.php?lang=sk" title="sk">
+							<img src="/langs/pics/sk.gif" alt="">
+						</a><a class="selectedLang" href="/index.php?lang=en" title="en">
+							<img src="/langs/pics/en.gif" alt="">
+						</a><a class="selectedLang" href="/index.php?lang=hu" title="hu">
+							<img src="/langs/pics/hu.gif" alt="">
+						</a><a class="selectedLang" href="/index.php?lang=de" title="de">
+							<img src="/langs/pics/de.gif" alt="">
+						</a><a class="selectedLang" href="/index.php?lang=pl" title="pl">
+							<img src="/langs/pics/pl.gif" alt="">
+						</a><a class="selectedLang" href="/index.php?lang=cz" title="cz">
+							<img src="/langs/pics/cz.gif" alt="">
+						</a><a class="selectedLang" href="/index.php?lang=kk" title="kk">
+							<img src="/langs/pics/kk.gif" alt="">
+						</a><a class="selectedLang" href="/index.php?lang=es" title="es">
+							<img src="/langs/pics/es.gif" alt="">
+						</a><a class="selectedLang" href="/index.php?lang=rb" title="rb">
+							<img src="/langs/pics/rb.gif" alt="">
+						</a><a class="selectedLang" href="/index.php?lang=fr" title="fr">
+							<img src="/langs/pics/fr.gif" alt="">
+						</a><a class="selectedLang" href="/index.php?lang=tr" title="tr">
+							<img src="/langs/pics/tr.gif" alt="">
+						</a>					</div>
+				</div>
+			</li><li class="login">
+				<a href="/portal/?module=Login">Login</a>
+			</li>
+		</ul>
+	</div>
+	<div class="obsahPasu obsahPasuLogo">
+		<a href="/portal/"><img src="/global/pics/icons/logo.png" alt=""></a>
+		<h1>EduPage</h1>
+		<span class="slogan">Teachers teach, we do the rest</span>	
+	</div>
+</div>
+<div id="hlavnyPas"><div class="obsahPasu"><div class="subhornyPas">
+	<div class="obsahPasu">
+		<span style="font-size: 16px;display:inline-block;">
+			Welcome to EduPage			
+		</span>		
+	</div>
+</div>
+<div style="height:50px"></div>
+<div style="text-align:center;">
+<div style="padding:20px 0px;width: 50%;max-width: 450px;min-width:300px;box-sizing: border-box;display: inline-block;text-align: left;" id="jw1_elem">
+		
+	<form action="https://portal.edupage.org/index.php?jwid=jw1&amp;module=Login" method="post">
+	<div><h1 style="font-size:3em;text-align: center;">Login</h1></div>
+	<div style="padding: 7px 0">
+		<div>Login name (e-mail):</div>
+		<div><input type="text" name="meno" value="" style="padding: 7px;width:100%;box-sizing: border-box;border:1px solid #aaa;"></div>
+	</div>
+	<div style="padding: 7px 0">
+		<div>Password:</div>
+		<div><input type="password" name="heslo" value="" style="padding: 7px;width:100%;box-sizing: border-box;;border:1px solid #aaa;"></div>
+	</div>
+	<div style="padding: 7px 0">
+		
+		<div style="vertical-align:middle;padding:5px;text-align:center;">
+			
+			<input type="submit" class="flat-button flat-button-blue flat-button-bigger" value="Login" style="padding: 10px 40px;font-size:1.3em;font-weight:bold;">
+			
+			<input type="hidden" name="akcia" value="login">
+		</div>			
+	</div>
+	<div>
+		<div style="text-align:center">				
+			<div style="margin: 10px 0;">
+				<a class="lostPasswordBtn" id="lostPasswordBtn" style="cursor:pointer">I do not know the login name or password</a>
+			</div>			
+		</div>
+	</div>
+	
+	</form>	
+</div>
+
+</div>
+
+<script type="text/javascript">
+$j(document).ready(function() {
+	$j('#jw1_elem').find('input[name="meno"]').focus();
+	
+	$j('#lostPasswordBtn').click(function() {
+		barNewDialog({
+			'source': '/portal/?module=Login&cmd=LostPassword',
+			'title': ls(1589),
+			'dialogClass': 'whiteDialog',
+			'width': 300
+		});
+	});
+	
+	});
+</script></div></div>
+<div id="dolnyPas">
+	<div class="obsahPasu">
+		<div id="footerNav">
+			<ul>
+				
+				<li>
+					<a href="http://www.asctimetables.com/" target="_blank"><span class="asc">asc</span>TimeTables</a>
+				</li>
+				<li>
+					<a href="http://www.edupage.org/" target="_blank"><span class="asc">asc</span>Edupage</a>
+				</li>
+				<li>
+					<a href="http://classregister.edupage.org/" target="_blank"><span class="asc">asc</span>Class Register</a>
+				</li>
+				<li>
+					<a href="http://mobile.edupage.org/" target="_blank">Mobile application</a>
+				</li>
+				<li>
+					<a href="http://www.ascagenda.com/" target="_blank"><span class="asc">asc</span>Agenda</a>
+				</li>
+			</ul>
+		</div>		
+		<div style="text-align: center;margin-top: 10px;">
+			© aSc 2020			<br><br>
+			<b>asc Applied Software Consultants, s.r.o.</b><br>
+			Námestie Slobody 11,<br>
+			811 06 Bratislava, Slovakia, EU<br><br>
+			
+			tel. (+421) 2 - 442 52580<br>
+			tel. (+421) 2 - 444 50535<br>	
+			<a href="mailto:info@asc.sk">info@asc.sk</a>
+		</div>		
+	</div>	
+</div>	
+<script type="text/javascript">
+$j(document).ready(function() {
+	function resize() {
+		$j('#hlavnyPas').css('min-height',($j(window).height()-180)+'px');
+	}
+	resize();
+	$j(window).on('resize',function() {
+		resize();
+	});
+});
+</script>	
+</body>
+</html>		

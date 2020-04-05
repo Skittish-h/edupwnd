@@ -1,0 +1,261 @@
+html, body {
+	background-color: #fafafa; 
+	min-height: 100%;
+}
+
+#hornyPas {
+	height: 120px;
+	background-color:#074e68;
+	box-shadow: 0 0 10px #000023;
+	color: #ffffff;
+	padding: 0 20px; 
+	position:relative;
+	z-index:1;
+	overflow:hidden;
+}
+#hornyPas h1 {
+	color: inherit;
+	font-size: 40px;
+	margin: 0;
+	padding: 0;
+}
+
+#hornyPas span.slogan {
+	font-size: 20px;
+	color: rgba(255,255,255,0.7);
+}
+
+#hornyPas img {
+	float: left;
+	width: 80px;
+	height: 80px;
+	margin-right: 20px;
+}
+
+.obsahPasuLogo {
+	padding: 20px 0;
+}
+
+.subhornyPas {
+	padding: 10px 20px;
+	background-color: #09698C;
+	margin-bottom: 15px;
+	color: #ffffff;
+	position: absolute;
+	left: 0px;
+	right: 0px;		
+}
+
+@media (max-width: 500px) {
+	#hornyPas {
+		height: 70px;		
+		padding: 0 20px 0 10px; 
+	}
+	#hornyPas h1 {
+		font-size: 25px;
+	}
+	
+	#hornyPas span.slogan {
+		font-size: 15px;
+		color: rgba(255,255,255,0.7);
+	}
+	
+	#hornyPas img {
+		float: left;
+		width: 40px;
+		height: 40px;
+		margin-top: 5px;
+		margin-right: 10px;
+	}
+
+	.obsahPasuLogo {
+		padding: 10px 0;
+	}
+	
+	.subhornyPas {
+		padding: 10px 10px;			
+	}
+}
+
+#hlavnyPas {
+	min-height: 100%;
+	padding: 0px 20px 20px 20px; 
+	position: relative;
+}
+
+#dolnyPas {
+	background-color: #333333;
+	padding: 20px;	
+	color: #999;
+}
+
+.obsahPasu {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1000px;	
+}
+
+.obsahPasuLinks {
+	position: relative;
+	height: 0;
+}
+
+
+#quickLinks {
+	position: absolute;
+	top: 0;
+	right: -18px;	
+}
+
+#quickLinks li {
+	background-color: rgba(9,105,140,0.6);
+	margin: 1px;
+	display: inline-block;
+	
+	height: 32px;
+	position: relative;
+	vertical-align: top;
+}
+#quickLinks li a {
+	cursor: pointer;
+	display: inline-block;	
+	padding: 4px;	
+	height: 32px;
+	box-sizing: border-box;
+}
+#quickLinks li a:hover {
+	background-color: rgba(9,105,140,0.8);
+	outline: 1px solid #000;
+	text-decoration: none;
+} 
+
+#quickLinks li.langChooser img {
+	width: 16px;
+	height: 10px;
+	margin: 7px 4px;
+	vertical-align: middle;
+}
+#quickLinks .langLinks {
+	display: none;
+	position: absolute;
+	width: 210px;
+	top: 0px;
+	right: 0;
+	padding-top:32px;	
+}
+#quickLinks .innerLinks {
+	background-color: rgba(9,105,140,0.8);
+	border: 1px solid #000;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+#quickLinks li.langChooser:hover .langLinks {
+	display: block;
+}
+#quickLinks li.login {
+
+}
+
+#quickLinks li.login a {
+	color: #fff;
+	text-transform: uppercase;
+	padding: 9px 15px;
+}
+hr {
+	border:0;
+	border-bottom:1px solid #074e68;
+	border-top:1px solid #D7E1E5;
+	height: 0px;
+	margin: 10px 0px;
+	margin-left: -10px;
+	margin-right: -10px;
+}
+
+.h-subtitle {
+	
+}
+
+
+.rpUserList li {
+	padding: 20px 10px;
+	border-bottom: 1px solid #d6d6d6;
+	border-top: 1px solid #d6d6d6;
+	margin-top: -1px;
+}
+.rpUserList li:hover {
+	background-color: #e8e8e8;
+}
+.rpUserList .celemeno {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.rpUserList .login {
+	margin-top:4px;
+}
+
+.rpUserList .actions {
+	margin-top: 10px;
+}
+
+#footerNav {
+	
+	text-align: center;
+	color: #bbb;
+	text-transform: ;
+}
+.asc {
+	font-size:0.8em;
+}
+
+
+#footerNav li {
+	display: inline-block;
+	padding: 5px 10px;
+	white-space: nowrap;	
+}
+
+#footerNav li a {
+	color: inherit;
+}
+
+
+.fieldListRow {
+	padding: 5px 0;
+	white-space:nowrap;
+	display: flex;
+	flex-flow: row nowrap;
+	max-width: 500px;
+	width: 100%;
+}
+
+.fieldListRow > .label {
+	flex: 30% 1 1;
+	color: #797979;
+	display: inline-block;	
+	text-align: right;
+	white-space:normal;
+	padding: 7px 10px 7px 0;
+}
+
+.fieldListRow > .value {
+	flex: 70% 1 1;
+	display: inline-block;	
+	white-space:normal;
+}
+
+.fieldListRow > .value.noinput {
+	padding: 7px 0;
+}
+
+.fieldListRow input[type="text"],
+.fieldListRow input[type="email"],
+.fieldListRow input[type="number"],
+.fieldListRow input[type="password"],
+.fieldListRow textarea,
+.fieldListRow select {
+	width: 100%;
+	box-sizing: border-box;
+	vertical-align: middle;
+	padding: 7px;
+	border: 1px solid #aaa;	
+}
